@@ -25,3 +25,74 @@
 #container a {
   text-decoration: none;
 }
+
+.float-bottom-right-circle {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+
+  font-size: 18px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  transform: rotate(45deg);
+}
+
+.float-bottom-right-circle {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+
+  font-size: 18px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  transform: rotate(45deg);
+  border: 5px solid white;
+  --border-radius: 0px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4) !important;
+}
+
+.ionic-card-para {
+  display: inline-block;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; // max nb lines to show
+  -webkit-box-orient: vertical;
+  max-height: 150px !important;
+  padding-bottom: 0px !important;
+  color: white;
+  font-weight: 50;
+}
+
+ion-card {
+  border: 1px solid orangered;
+}
+
+.card-16-padding {
+  padding-bottom: 16px !important;
+}
+
+.title-orange {
+  color: orangered;
+}
+
+#typeNote {
+  color: orangered;
+}
+
+.whole-width-height {
+  height: 100%;
+  width: 100%;
+  background: rgb(150, 35, 0);
+}
+
+.ico-button {
+  width: 100%;
+  height: 100%;
+  color: white;
+  transform: rotate(45deg);
+}

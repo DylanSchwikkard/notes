@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <i slot="start" (click)="goBack()" class="material-icons">
+      arrow_back
+    </i>
+    <ion-title>Add New Category</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div class="test"></div>
+
+<ion-content>
+  <form [formGroup]="formGroup" (ngSubmit)="addCat(formGroup.value)">
+    <ion-item>
+      <ion-label>Type:</ion-label>
+      <ion-input
+        id="name-field"
+        type="text"
+        name="type"
+        ngModel
+        formControlName="type"
+        class="inputClass"
+      ></ion-input>
+      <div
+        class="alert"
+        *ngIf="!formGroup.controls['type'].valid && formGroup.controls['type'].touched"
+      >
+        {{ typeAlert }}
+      </div>
+    </ion-item>
+    <ion-item (click)="doThis()">
+      <ion-label>Icon</ion-label>
+      <ion-select
+        class="material-icons center-icon"
+        name="icon"
+        ngModel
+        formControlName="icon"
+      >
+        <ion-select-option *ngFor="let i of iconList">
+          <i> {{ i }} </i>
+        </ion-select-option>
+      </ion-select>
+      <div
+        class="alert"
+        *ngIf="!formGroup.controls['type'].valid && formGroup.controls['type'].touched"
+      >
+        {{ typeAlert }}
+      </div>
+    </ion-item>
+    <ion-button type="submit" [disabled]="!formGroup.valid">Add</ion-button>
+  </form>
+</ion-content>

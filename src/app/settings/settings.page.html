@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <i slot="start" (click)="goBack()" class="material-icons">
+      arrow_back
+    </i>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>
+      Use Categories
+    </ion-label>
+    <ion-toggle
+      [(ngModel)]="categories"
+      (ionChange)="categoriesChange($event)"
+      slot="end"
+    >
+    </ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      Light Mode
+    </ion-label>
+    <ion-toggle
+      [(ngModel)]="lightMode"
+      (ionChange)="themeChange($event)"
+      slot="end"
+    >
+    </ion-toggle>
+  </ion-item>
+</ion-content>

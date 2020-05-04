@@ -1,3 +1,61 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay" side="end">
+      <ion-content class="left-border">
+        <ion-list id="inbox-list" class="category border-color">
+          <ion-list-header class="header-menu">Categories</ion-list-header>
+          <ion-note></ion-note>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of categories">
+            <ion-item
+              (click)="setCategory(p.type)"
+              class=""
+              routerDirection="root"
+              [routerLink]="['/home' + p.url]"
+              lines="none"
+              detail="false"
+            >
+              <i slot="start" class="material-icons">
+                {{ p.icon }}
+              </i>
+              <ion-label>{{ p.type }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle>
+            <ion-item
+              routerDirection="root"
+              [routerLink]="['add-category']"
+              lines="none"
+              detail="false"
+            >
+              <i slot="start" class="material-icons">
+                add
+              </i>
+              <ion-label>{{ "Add new category" }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+      <ion-footer class="bar-stable left-border">
+        <ion-menu-toggle>
+          <ion-item
+            routerDirection="root"
+            [routerLink]="'/settings'"
+            lines="none"
+            detail="false"
+          >
+            <i slot="start" class="material-icons"> settings </i>
+            <ion-label>Settings</ion-label></ion-item
+          >
+        </ion-menu-toggle>
+      </ion-footer>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
+
+<!-- (click)="(selectedIndex)"
+              routerDirection="root"
+              [routerLink]="[p.url]"
+              lines="none"
+              detail="false"
+              [class.selected]="selectedIndex == i" -->

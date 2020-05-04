@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <i slot="start" (click)="goBack()" class="back-but material-icons">
+      arrow_back
+    </i>
+    <ion-title>View Note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        {{ note.title }}
+      </ion-card-title>
+      <div class="note-date">{{ note.date}}</div>
+      <hr />
+      <div>{{note.content}}</div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-button button color="danger" block (click)="deleteNote(note.createDate)"
+    >Delete</ion-button
+  >
+</ion-footer>

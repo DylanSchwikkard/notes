@@ -1,0 +1,29 @@
+.inputClass {
+  text-align: center;
+  overflow: hidden;
+  background-color: rgb(212, 212, 212);
+  margin-left: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  --padding-end: 8px;
+  color: black;
+  width: 100%;
+}
+
+.sc-ion-alert-md-h {
+  --min-width: 0px;
+}
+
+.alert-radio-label.sc-ion-alert-md {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-overflow: clip;
+}
+
+.center-icon {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}

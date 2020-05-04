@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <i slot="start" (click)="goBack()" class="material-icons">
+      arrow_back
+    </i>
+    <ion-title>Add note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formGroup" (ngSubmit)="saveNote(formGroup.value)">
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime
+        displayFormat="DD/MM/YYYY"
+        formControlName="date"
+      ></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Title</ion-label>
+      <ion-input
+        type="text"
+        name="title"
+        ngModel
+        formControlName="title"
+      ></ion-input>
+      <div
+        class="alert"
+        *ngIf="!formGroup.controls['title'].valid && formGroup.controls['title'].touched"
+      >
+        {{ titleAlert }}
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select
+        type="text"
+        name="category"
+        ngModel
+        formControlName="category"
+      >
+        <ion-select-option *ngFor="let c of categories">
+          {{ c.type }}
+        </ion-select-option>
+      </ion-select>
+      <div
+        class="alert"
+        *ngIf="!formGroup.controls['content'].valid && formGroup.controls['content'].touched"
+      >
+        {{ titleAlert }}
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label>Content</ion-label>
+      <ion-input
+        type="text"
+        name="content"
+        ngModel
+        formControlName="content"
+      ></ion-input>
+      <div
+        class="alert"
+        *ngIf="!formGroup.controls['content'].valid && formGroup.controls['content'].touched"
+      >
+        {{ titleAlert }}
+      </div>
+    </ion-item>
+    <ion-button type="submit" [disabled]="!formGroup.valid"
+      >Save Notes</ion-button
+    >
+  </form>
+</ion-content>
