@@ -15,10 +15,15 @@
       </ion-card-title>
       <div class="note-date">{{ note.date}}</div>
       <hr />
-      <div>{{note.content}}</div>
+      <ion-textarea
+        class="text-area-ion"
+        autoGrow="true"
+        value="{{note.content}}"
+      ></ion-textarea>
     </ion-card-content>
   </ion-card>
 </ion-content>
+
 <ion-footer>
   <ion-button button color="danger" block (click)="deleteNote(note.createDate)"
     >Delete</ion-button

@@ -35,7 +35,7 @@ $font-path: "../assets/fonts";
 }
 
 @font-face {
-  font-family: "RobotMono";
+  font-family: "RobotMono-i";
   font-style: italic;
   font-weight: normal;
   src: url("../assets/fonts/RobotoMono-MediumItalic.ttf");
@@ -72,18 +72,6 @@ $font-path: "../assets/fonts";
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "liga";
-}
-
-.left-border {
-  border-left: 3px solid orangered;
-}
-
-.border-color {
-  border-color: rgba(255, 68, 0, 0.2) !important;
-}
-
-i {
-  color: rgb(255, 174, 0) !important;
 }
 
 :root {
