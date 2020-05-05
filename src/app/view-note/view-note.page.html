@@ -10,12 +10,20 @@
 <ion-content>
   <ion-card>
     <ion-card-content>
-      <ion-card-title>
-        {{ note.title }}
+      <ion-card-title slot="start">
+        <ion-input
+          class="title-input"
+          type="text"
+          name="title"
+          value="{{ note.title }}"
+        ></ion-input>
       </ion-card-title>
-      <div class="note-date">{{ note.date}}</div>
+      <ion-card-subtitle slot="start" class="note-date"
+        >{{ getDate(note.date) }}</ion-card-subtitle
+      >
       <hr />
       <ion-textarea
+        id="content-note"
         class="text-area-ion"
         autoGrow="true"
         value="{{note.content}}"
@@ -24,8 +32,24 @@
   </ion-card>
 </ion-content>
 
-<ion-footer>
-  <ion-button button color="danger" block (click)="deleteNote(note.createDate)"
-    >Delete</ion-button
-  >
+<ion-footer class="footer-height">
+  <ion-buttons
+    class="footer-left-button"
+    button
+    color="danger"
+    (click)="deleteNote(note.createDate)"
+    ><button class="whole-width-height">
+      <ion-icon class="ico-button" name="trash-outline"></ion-icon></button
+  ></ion-buttons>
+  <ion-buttons
+    class="footer-right-button"
+    button
+    color="danger"
+    (click)="saveNote(note.createDate)"
+    ><button class="whole-width-height">
+      <ion-icon
+        class="ico-button-right"
+        name="checkmark-done-outline"
+      ></ion-icon></button
+  ></ion-buttons>
 </ion-footer>

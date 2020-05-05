@@ -1,6 +1,7 @@
 import { Note } from "./../models/note.model";
 import { Injectable } from "@angular/core";
 import { Storage } from "@ionic/storage";
+import { exists } from "fs";
 
 @Injectable({
   providedIn: "root",
@@ -49,5 +50,15 @@ export class NoteService {
       this.note = [...notes].find((r) => r.createDate === cDate);
       return this.note;
     });
+  }
+
+  updateNote(n: Note): Promise<any> {
+    this.notes.forEach((note) => {
+      if ((note.createDate = n.createDate)) {
+        note.content = n.content;
+        note.title = n.title;
+      }
+    });
+    return this.storage.set("notes", this.notes);
   }
 }

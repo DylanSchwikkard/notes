@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <i slot="start" (click)="goBack()" class="material-icons">
+    <i slot="start" (click)="goBack()" class="back-but material-icons">
       arrow_back
     </i>
     <ion-title>Settings</ion-title>
@@ -19,15 +19,18 @@
     >
     </ion-toggle>
   </ion-item>
-  <ion-item>
+  <!-- <ion-item>
     <ion-label>
       Light Mode
     </ion-label>
-    <ion-toggle
+     <ion-toggle
       [(ngModel)]="lightMode"
       (ionChange)="themeChange($event)"
       slot="end"
     >
-    </ion-toggle>
-  </ion-item>
+    </ion-toggle> 
+  </ion-item> -->
+  <ion-item button (click)="deleteCat()">Delete Category</ion-item>
 </ion-content>
+
+<div class="overlay-div"></div>

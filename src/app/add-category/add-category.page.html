@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <i slot="start" (click)="goBack()" class="material-icons">
+    <i slot="start" (click)="goBack()" class="back-but material-icons">
       arrow_back
     </i>
     <ion-title>Add New Category</ion-title>
@@ -46,6 +46,14 @@
         {{ typeAlert }}
       </div>
     </ion-item>
-    <ion-button type="submit" [disabled]="!formGroup.valid">Add</ion-button>
+    <ion-buttons class="float-bottom-right-circle">
+      <button
+        type="submit"
+        [disabled]="!formGroup.valid"
+        class="whole-width-height"
+      >
+        <ion-icon class="ico-button" name="checkmark-done-outline"></ion-icon>
+      </button>
+    </ion-buttons>
   </form>
 </ion-content>

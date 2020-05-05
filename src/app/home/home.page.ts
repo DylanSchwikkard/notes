@@ -56,7 +56,7 @@ export class HomePage {
   getDate(date) {
     let d = new Date(date);
 
-    return d.toLocaleString();
+    return d.toLocaleDateString();
   }
 
   async initSettings() {

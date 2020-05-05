@@ -34,4 +34,11 @@ export class CategorydisplayService {
       return this.category;
     });
   }
+
+  deleteCat(n: string) {
+    this.categories = this.categories.filter((note) => {
+      return note.type !== n;
+    });
+    this.storage.set("categories", this.categories);
+  }
 }

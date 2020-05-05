@@ -3,3 +3,97 @@
   border-radius: 5px;
   padding: 10px;
 }
+
+ion-content {
+  display: flex;
+  align-items: center;
+}
+
+ion-card {
+  min-height: calc(100vh - 150px);
+}
+
+.note-date {
+  margin-left: 7px;
+}
+
+ion-toolbar {
+  border-bottom: 3px solid orangered;
+  box-shadow: 0px 3px white;
+  --background: #121212 !important;
+}
+
+.title-input {
+  color: white;
+}
+
+ion-card {
+  padding-bottom: 20px;
+}
+
+ion-footer {
+  border-top: 2px solid orangered;
+  box-shadow: 0px -2px white;
+  // --background: #121212 !important;
+  // background: #121212 !important;
+  background: rgba(0, 0, 0, 0);
+  --background: rgba(0, 0, 0, 0);
+}
+
+.footer-left-button {
+  position: absolute;
+  height: 38px;
+  bottom: 15px;
+  left: 15px;
+  width: 38px;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px red;
+}
+
+.footer-height {
+  height: 70px;
+}
+
+.footer-right-button {
+  position: absolute;
+  height: 38px;
+  bottom: 15px;
+  right: 15px;
+  width: 38px;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px orangered;
+}
+
+.whole-width-height {
+  height: 100%;
+  width: 100%;
+  background: #121212;
+}
+
+.ico-button {
+  width: 80%;
+  height: 80%;
+  color: red;
+}
+
+.ico-button-right {
+  width: 80%;
+  height: 80%;
+  color: orangered;
+}
+
+.footer-right-button:active {
+  box-shadow: 0px 0px 15px orangered;
+}
+
+.footer-left-button:active {
+  box-shadow: 0px 0px 15px red;
+}
+
+.whole-width-height:active {
+  background: #222222;
+}
