@@ -53,7 +53,7 @@ export class NoteService {
 
   updateNote(n: Note): Promise<any> {
     this.notes.forEach((note) => {
-      if ((note.createDate = n.createDate)) {
+      if (note.createDate == n.createDate) {
         note.content = n.content;
         note.title = n.title;
       }
